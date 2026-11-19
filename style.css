@@ -1,0 +1,33 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+:root { color-scheme: dark; --fundo: #141b2a; --cartao: #202b40; --texto: #edf2ff; --suave: #b3bfd3; --azul: #8eafff; --azul-claro: #2d3c5c; --borda: #35435b; }
+body { font-family: Arial, Helvetica, sans-serif; background: var(--fundo); color: var(--texto); line-height: 1.6; }
+a { color: inherit; text-decoration: none; }
+.topo { background: var(--cartao); border-bottom: 1px solid var(--borda); position: sticky; top: 0; z-index: 5; }
+.navegacao { max-width: 1000px; margin: auto; padding: 16px 22px; display: flex; align-items: center; justify-content: space-between; gap: 18px; }
+.logo { font-size: 22px; font-weight: bold; }.logo span { color: var(--azul); }
+.links { display: flex; gap: 22px; color: var(--suave); font-size: 14px; }.links a:hover { color: var(--azul); }
+main { max-width: 1000px; margin: auto; padding: 0 22px; }
+.inicio { min-height: 390px; display: flex; align-items: center; justify-content: space-between; gap: 30px; padding: 65px 5%; }
+.etiqueta, .categoria { color: var(--azul); font-size: 11px; font-weight: bold; letter-spacing: 1.4px; }
+h1 { font-size: clamp(34px, 5vw, 52px); line-height: 1.13; margin: 14px 0; } h1 span { color: var(--azul); }
+.subtitulo { max-width: 510px; color: var(--suave); margin-bottom: 24px; }
+.botao, button { display: inline-block; background: var(--azul); color: white; border: 0; padding: 11px 17px; border-radius: 9px; font-weight: bold; cursor: pointer; font-size: 14px; }
+.avatar { width: 175px; height: 175px; flex-shrink: 0; border-radius: 50%; background: var(--azul-claro); border: 8px solid var(--cartao); box-shadow: 0 0 0 1px var(--borda); display: grid; place-items: center; color: var(--azul); font-size: 46px; font-weight: bold; }
+.secao { padding: 35px 5%; scroll-margin-top: 80px; } h2 { font-size: 27px; margin-bottom: 18px; }
+.cartao { background: var(--cartao); border: 1px solid var(--borda); border-radius: 14px; padding: 22px; box-shadow: 0 5px 18px #24395b0a; }
+.sobre p + p { margin-top: 12px; }.sobre { color: var(--suave); }
+.grade { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; }
+.habilidade span { color: var(--azul); font-size: 12px; font-weight: bold; }.habilidade h3, .projeto h3, .app h3 { margin: 7px 0; }.habilidade p, .projeto p, .descricao, .contato p { color: var(--suave); font-size: 14px; }
+.titulo-linha { display: flex; justify-content: space-between; align-items: end; gap: 15px; margin-bottom: 18px; }.titulo-linha h2 { margin-bottom: 3px; }
+select, input { background: var(--cartao); color: var(--texto); border: 1px solid var(--borda); border-radius: 8px; padding: 10px; min-width: 0; }
+.projeto { min-height: 205px; }.icone-projeto { width: 38px; height: 38px; display: grid; place-items: center; background: var(--azul-claro); color: var(--azul); border-radius: 10px; font-size: 21px; margin-bottom: 13px; }
+.projeto .categoria { font-size: 10px; }.tag { display: inline-block; margin-top: 15px; background: var(--azul-claro); color: var(--azul); border-radius: 20px; padding: 4px 9px; font-size: 11px; }
+.mini-apps { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 18px; }.app .descricao { margin-bottom: 13px; }
+.linha-input { display: flex; gap: 8px; }.linha-input input { flex: 1; width: 100%; }.linha-input button, .app > button { padding: 9px 12px; }
+#lista-tarefas { list-style: none; margin-top: 12px; }.tarefa { padding: 7px 2px; border-bottom: 1px solid var(--borda); color: var(--suave); cursor: pointer; }.tarefa.feita { text-decoration: line-through; opacity: .6; }
+.notas { display: flex; gap: 7px; margin-bottom: 12px; }.nota { width: 33%; }
+.resultado { color: var(--azul); font-weight: bold; margin-top: 12px; font-size: 14px; }
+.contato { text-align: center; }.contato p { margin-bottom: 17px; }.email { margin: 12px 0 0 !important; font-size: 12px !important; }
+footer { text-align: center; padding: 25px; color: var(--suave); font-size: 12px; border-top: 1px solid var(--borda); margin-top: 35px; }
+@media (max-width: 650px) { .links { gap: 10px; font-size: 12px; }.inicio { min-height: 0; padding: 55px 2%; }.avatar { width: 105px; height: 105px; font-size: 28px; border-width: 5px; }.grade, .mini-apps { grid-template-columns: 1fr; }.secao { padding: 28px 2%; }.navegacao { padding: 13px 15px; }.links { flex-wrap: wrap; justify-content: center; }.titulo-linha { align-items: start; flex-direction: column; } }
+@media (max-width: 420px) { .avatar { display: none; }.links { gap: 8px; }.logo { font-size: 18px; } }
